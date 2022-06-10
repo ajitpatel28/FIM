@@ -57,7 +57,7 @@ elseif ($response -eq "B".ToUpper()) {
         # For each file, calculate the hash, and write to baseline.txt
         foreach ($f in $files) {
             $hash = Calculate-File-Hash $f.FullName
-            #"$($hash.Path)|$($hash.Hash)" | Out-File -FilePath .\baseline.txt -Append
+   
 
             # Notify if a new file has been created
             if ($fileHashDictionary[$hash.Path] -eq $null) {
